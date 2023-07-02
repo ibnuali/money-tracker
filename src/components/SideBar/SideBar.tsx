@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import "react-tooltip/dist/react-tooltip.css";
 import {
   RiAddLine,
   RiBriefcase2Line,
