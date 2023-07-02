@@ -1,9 +1,19 @@
+import Card from "@/components/Card";
+import Tabs from "@/components/Tabs";
 import TextInput from "@/components/TextInput";
 import Chart from "react-apexcharts";
 
 export default function Home() {
   return (
-    <div className="flex mt-20 justify-between">
+    <div className="flex flex-col mt-10 justify-between gap-5">
+      <Card className=" w-full xl:w-1/4 lg:w-1/2">
+        <span className="text-sm font-normal">Available Balance</span>
+        <div className="flex flex-row items-center justify-between">
+          <h1 className="text-xl font-semibold">$ 1,000.00</h1>
+        </div>
+      </Card>
+      <div className="flex  lg:flex-row flex-col-reverse justify-between gap-4">
+      <Tabs/>
       {/* <Chart
         options={
           {
@@ -16,7 +26,7 @@ export default function Home() {
                 breakpoint: 480,
                 options: {
                   chart: {
-                    width: 200,
+                    width: 100,
                   },
                   legend: {
                     position: "bottom",
@@ -28,13 +38,10 @@ export default function Home() {
         }
         series={[44, 55, 13, 43, 22]}
         type="donut"
-        width="500"
+        width="350"
       /> */}
-      <div className="flex flex-col">
-        <div className="flex items-center gap-x-2">
-          <TextInput/>
-        </div>
-        </div>
+      </div>
+      
     </div>
   );
 }
